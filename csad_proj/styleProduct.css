@@ -1,0 +1,477 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  font-family: 'Monaco',Monospace;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  background-color: black;
+}
+:root {
+  --main-color: #fd4646;
+  --text-color: #171427;
+  --bg-color: #fff;
+}
+img {
+  width: 100%;
+}
+body {
+  color: var(--text-color);
+}
+.container1 {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+section {
+  padding: 4rem 0 3rem;
+}
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+  z-index: 100;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.logo {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
+#cart-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+/* Cart */
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-color);
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+  transition: 0.3s;
+  background-color: white;
+}
+.cart.active {
+  right: 0;
+  background-color: white;
+}
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  background-color: white;
+}
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  background-color: white;
+}
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: white;
+}
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+  background-color: white;
+}
+.cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: white;
+}
+.cart-price {
+  font-weight: 500;
+  background-color: white;
+}
+.cart-quantity {
+  border: 1px solid var(--text-color);
+  outline-color: var(--main-color);
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+  background-color: white;
+}
+.cart-remove {
+  font-size: 24px;
+  color: var(--main-color);
+  cursor: pointer;
+  background-color: white;
+}
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--text-color);
+  background-color: white;
+}
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: white;
+}
+.total-price {
+  margin-left: 0.5rem;
+  background-color: white;
+}
+.btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  border: none;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-buy:hover {
+  background: var(--text-color);
+ 
+  
+}
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: white;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.shop {
+  margin-top: 2rem;
+  
+}
+/* Shop Content */
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+}
+.product-box {
+  position: relative;
+}
+.product-box:hover {
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  transition: 0.4s;
+}
+.product-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.price {
+  font-weight: 500;
+  color: white;
+}
+.add-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px;
+  cursor: pointer;
+}
+.add-cart:hover {
+  background: hsl(249, 32%, 17%);
+}
+/* Breakpoints / Making Responsive */
+@media (max-width: 1080px) {
+  .nav {
+    padding: 15px;
+  }
+  section {
+    padding: 3rem 0 2rem;
+  }
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .shop {
+    margin-top: 2rem !important;
+  }
+}
+@media (max-width: 400px) {
+  .nav {
+    padding: 11px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .cart {
+    width: 320px;
+  }
+}
+@media (max-width: 360px) {
+  .shop {
+    margin-top: 1rem !important;
+  }
+  .cart {
+    width: 280px;
+  }
+}
+
+
+#header{
+    width : 100%;
+    height: 8vh;
+    background-color: black;
+    background-size:cover;
+    background-position:center;
+    
+}
+.container{
+    
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+ }
+ nav ul li{
+     display: inline-block;
+     list-style: none;
+     margin: 10px 20px;
+ }
+ nav ul li a{
+     color:#fff;
+     text-decoration: none;
+     font-size: 20px;
+     position: relative;
+ }
+ nav ul li a::after{
+     content:'';
+     width: 0%;
+     height: 3px;
+     background:#7600bc;
+     position: absolute;
+     left: 0;
+     bottom: -6px;
+     transition: 0.5s;
+ }
+ nav ul li a:hover::after{
+     width: 100%;
+ }
+ .header-text{
+     margin-top: 20%;
+     font-size: 30px;
+ }
+ .header-text.h1{
+     font-size: 60px;
+     margin-top: 20px;
+ }
+ .header-text h1 span{
+     color: #7600bc;
+ }
+ 
+ 
+ 
+ /*footer*/
+ :root {
+  --main-color: #7600BC;
+  --main-light-color: purple;
+  --container-color: white;
+  --text-color: white;
+  --bg-color: #262626;
+}
+ img {
+  width: 100%;
+}
+ 
+ section {
+  padding: 4rem 0 2rem;
+  color : white;
+}
+ .logo img {
+  width: 70px;}
+
+ .newsletter {
+  display: grid;
+  justify-items: center;
+}
+.newsletter form {
+  margin-top: 2rem;
+  display: flex;
+  background: var(--container-color);
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+.newsletter form .email-box {
+  width: 250px;
+}
+.newsletter form input {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.newsletter form .btn {
+  background: var(--main-color);
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.newsletter form .btn:hover {
+  background: var(--main-light-color);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.footer .logo {
+  margin-bottom: 1rem;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.social {
+  display: flex;
+  align-items: center;
+}
+.social a {
+  font-size: 24px;
+  margin-right: 1rem;
+  color: var(--text-color);
+}
+.social a:hover {
+  transform: translateY(-4px);
+  transition: 0.4s;
+}
+.footer-box h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.footer-box a,
+.footer-box p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.footer-box a:hover {
+  color: var(--main-color);
+}
+.copyright {
+  padding: 25px;
+  text-align: center;
+  background-color: #7600BC;
+  color : white;
+}
+/* Making Responsive */
+@media (max-width: 1080px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 991px) {
+  .nav {
+    padding: 15px 20px;
+  }
+  section {
+    padding: 3rem 0 1rem;
+  }
+  .home-text h1 {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px 0;
+  }
+  #menu-icon {
+    display: initial;
+  }
+}  
+
+@media (max-width: 672px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+  .home-text {
+    order: 2;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  }
+  .newsletter form .email-box {
+    width: 180px;
+  }
+}
+@media (max-width: 360px) {
+  .logo img {
+    width: 54px;
+  }
+  .nav-icons .bx {
+    font-size: 20px;
+  }
+  .home-text p br {
+    display: contents;
+  }
+  .heading h2 {
+    font-size: 1.2rem;
+  }
+  .featured-container .box img {
+    width: 135px;
+  }
+  .newsletter form .email-box {
+    width: 140px;
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 14px 20px;
+  }
+}
+ 
